@@ -1,0 +1,22 @@
+{
+  "prefix": "ENV05_MarketAlleyKit_",
+  "seed": 20261110,
+  "modules": {
+    "Shop0": [
+      "Shop0Wall",
+      "Shop0Roof",
+      "Shop0Door",
+      "Shop0Window",
+      "Awning0",
+      "Sign0"
+    ],
+    "Shop1": [
+      "Shop1Wall",
+      "Shop1Roof",
+      "Shop1Door",
+      "Shop1Window",
+      "Awning1",
+      "Sign1"
+    ]
+  }
+}
