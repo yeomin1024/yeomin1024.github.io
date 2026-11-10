@@ -1,0 +1,18 @@
+{
+  "id": "ENV10",
+  "name": "HaeundaeSkyline",
+  "dims": [
+    225.0,
+    120.0,
+    411.6000061035156
+  ],
+  "roundtrip_dims": [
+    225.0,
+    120.0,
+    411.6000061035156
+  ],
+  "triangles": 384,
+  "parts": 9,
+  "budget": 5000,
+  "pass_": true
+}
