@@ -175,7 +175,8 @@ busan-3d/
 ├─ assets/{ID}_{영문명}/             ← 3D: spec.md·images/(ChatGPT), 스크립트·.blend·.glb·previews/·validation.md(Claude)
 │                                     (v1 초안 폴더도 여기 있음 — 보관용, 고치지 않음)
 ├─ photos/{ID}_{영문명}/             ← 실제 사진: photo_sheet.md, 원본 사진, 편집본(있으면)
-└─ images/{ID}_{영문명}/             ← 일러스트: image_sheet.md, 이미지 파일
+├─ images/{ID}_{영문명}/             ← 일러스트: image_sheet.md, 이미지 파일
+└─ video/                           ← 영상(Claude): video/opening/ 오프닝 초안. ChatGPT는 고치지 않음
 ```
 - **사진 파일 이름:** `{ID}_{번호}_{짧은영문설명}_orig.jpg`, 편집본은 `..._edit.jpg` 예) `PH20_01_daritdol_ushape_orig.jpg`
 - **저장할 때마다 할 일:**

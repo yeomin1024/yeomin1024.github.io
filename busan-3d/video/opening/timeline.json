@@ -1,0 +1,313 @@
+{
+  "version": "v1.1",
+  "date": "2026-11-10",
+  "note": "오프닝(1일차 앞부분) 타임라인. opening_blender.py 와 opening_overlay.py 가 같이 읽는다. 시간·버스·정류장 문구는 FACTS.md 1장 그대로. v1.1: 가까운 장면 카메라를 뒤로·위로(지형 각 줄이기), 핀 0.6배, 지형 부드러운 음영, 렌더 샘플 8. 3D 는 75%(960x540)로 렌더하고 글자는 1280x720 에서 얹는다(초안 속도).",
+  "fps": 24,
+  "resolution": [
+    1280,
+    720
+  ],
+  "frame_start": 1,
+  "frame_end": 528,
+  "segments": [
+    {
+      "id": "title",
+      "start": 1,
+      "end": 84,
+      "desc": "제목, 지도 전체 → 서서히 다가감"
+    },
+    {
+      "id": "day1",
+      "start": 85,
+      "end": 132,
+      "desc": "1일차 카드, 부산역 쪽으로 이동"
+    },
+    {
+      "id": "arrive",
+      "start": 133,
+      "end": 216,
+      "desc": "KTX 토큰이 부산역에 도착"
+    },
+    {
+      "id": "lunch",
+      "start": 217,
+      "end": 252,
+      "desc": "부산역 앞 점심"
+    },
+    {
+      "id": "bus",
+      "start": 253,
+      "end": 408,
+      "desc": "부산역 → 남포 → 토성 → 감천 루트 그리기, 버스 토큰 이동"
+    },
+    {
+      "id": "gamcheon",
+      "start": 409,
+      "end": 480,
+      "desc": "감천문화마을 도착"
+    },
+    {
+      "id": "credits",
+      "start": 481,
+      "end": 528,
+      "desc": "자료 출처"
+    }
+  ],
+  "camera_keys": [
+    {
+      "frame": 1,
+      "loc": [
+        0.05,
+        -2.9,
+        1.7
+      ],
+      "target": [
+        0.05,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "frame": 84,
+      "loc": [
+        -0.2,
+        -2.3,
+        1.3
+      ],
+      "target": [
+        -0.15,
+        -0.1,
+        0.0
+      ]
+    },
+    {
+      "frame": 132,
+      "loc": [
+        -0.5,
+        -1.55,
+        0.72
+      ],
+      "target": [
+        -0.55,
+        -0.33,
+        0.0
+      ]
+    },
+    {
+      "frame": 216,
+      "loc": [
+        -0.62,
+        -1.25,
+        0.55
+      ],
+      "target": [
+        -0.66,
+        -0.42,
+        0.0
+      ]
+    },
+    {
+      "frame": 252,
+      "loc": [
+        -0.66,
+        -1.22,
+        0.53
+      ],
+      "target": [
+        -0.67,
+        -0.43,
+        0.0
+      ]
+    },
+    {
+      "frame": 330,
+      "loc": [
+        -0.8,
+        -1.4,
+        0.62
+      ],
+      "target": [
+        -0.81,
+        -0.5,
+        0.0
+      ]
+    },
+    {
+      "frame": 408,
+      "loc": [
+        -0.93,
+        -1.32,
+        0.5
+      ],
+      "target": [
+        -0.95,
+        -0.58,
+        0.02
+      ]
+    },
+    {
+      "frame": 480,
+      "loc": [
+        -1.05,
+        -1.25,
+        0.47
+      ],
+      "target": [
+        -0.97,
+        -0.59,
+        0.02
+      ]
+    },
+    {
+      "frame": 528,
+      "loc": [
+        -1.0,
+        -1.6,
+        0.75
+      ],
+      "target": [
+        -0.9,
+        -0.55,
+        0.0
+      ]
+    }
+  ],
+  "camera_lens_mm": 32,
+  "route": {
+    "object": "MAP01_BusanMap_RouteDay1_L0",
+    "to_place": "gamcheon",
+    "draw_start": 253,
+    "draw_end": 408
+  },
+  "hide_objects": [
+    "MAP01_BusanMap_RouteDay2_L0",
+    "MAP01_BusanMap_RouteDay3_L0"
+  ],
+  "bus_token": {
+    "start": 253,
+    "end": 408,
+    "color": "#2E6FB7",
+    "label": "61번 / 서구2-2",
+    "temporary": true
+  },
+  "ktx_token": {
+    "start": 150,
+    "end": 200,
+    "from_via": "busanjin",
+    "to_place": "busan_station",
+    "color": "#F2EFE6",
+    "temporary": true
+  },
+  "labels": [
+    {
+      "place": "busan_station",
+      "text": "부산역",
+      "start": 140,
+      "end": 330
+    },
+    {
+      "place": "biff",
+      "text": "남포 · BIFF광장",
+      "start": 290,
+      "end": 380
+    },
+    {
+      "place": "gamcheon",
+      "text": "감천문화마을",
+      "start": 340,
+      "end": 480
+    }
+  ],
+  "panels": [
+    {
+      "start": 133,
+      "end": 216,
+      "time": "10:30",
+      "title": "부산역 도착",
+      "sub": "KTX"
+    },
+    {
+      "start": 217,
+      "end": 252,
+      "time": "10:50",
+      "title": "점심 · 부산역 앞 밀면집",
+      "sub": "밀면, 왕만두"
+    },
+    {
+      "start": 253,
+      "end": 408,
+      "time": "11:40",
+      "title": "61번 또는 마을버스 서구2-2",
+      "sub": "부산역 → 남포 → 토성 → 감천문화마을.부산교육역사관 하차",
+      "note": "지도 위 경로는 개략 (주요 정류장 연결)"
+    },
+    {
+      "start": 409,
+      "end": 480,
+      "time": "12:20",
+      "title": "감천문화마을",
+      "sub": "해발 약 98 m · 13:50까지 둘러보기"
+    }
+  ],
+  "photo_placeholders": [
+    {
+      "start": 160,
+      "end": 216,
+      "id": "PH01",
+      "name": "부산역"
+    },
+    {
+      "start": 217,
+      "end": 252,
+      "id": "FD01",
+      "name": "밀면·왕만두"
+    },
+    {
+      "start": 425,
+      "end": 480,
+      "id": "PH07",
+      "name": "감천문화마을"
+    }
+  ],
+  "title": {
+    "start": 1,
+    "end": 84,
+    "text": "부산 2박 3일, 버스로만",
+    "sub": "택시 없이 시내버스만 타고 떠나는 여행"
+  },
+  "day_card": {
+    "start": 85,
+    "end": 252,
+    "text": "1일차 · 금요일",
+    "color": "#F28C5B"
+  },
+  "credits": {
+    "start": 481,
+    "end": 528,
+    "lines": [
+      "지도 좌표  © OpenStreetMap contributors (ODbL)",
+      "지형  produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018",
+      "provided under COPERNICUS by the European Union and ESA; all rights reserved",
+      "The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30",
+      "글꼴  Noto Sans CJK (SIL Open Font License)"
+    ]
+  },
+  "draft_tag": "오프닝 초안 v1 · 실제 사진 미삽입 · 탈것 아이콘 임시",
+  "check_frames": [
+    40,
+    110,
+    190,
+    240,
+    330,
+    400,
+    450,
+    510
+  ],
+  "render": {
+    "engine": "BLENDER_EEVEE_NEXT",
+    "taa_samples": 8,
+    "pin_scale": 0.6,
+    "terrain_smooth": true,
+    "resolution_percentage": 75
+  }
+}
