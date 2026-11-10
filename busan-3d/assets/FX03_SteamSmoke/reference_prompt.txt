@@ -1,0 +1,1 @@
+reusable steam and smoke volume shader; technical shader/compositor diagram; show node links, artistic parameter values and morning/noon/sunset/night palette swatches; no logos, no copied application screens. All numerical values are design settings. Clean light background and readable labels.
