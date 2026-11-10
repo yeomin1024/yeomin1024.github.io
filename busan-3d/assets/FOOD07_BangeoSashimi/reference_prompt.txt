@@ -1,0 +1,7 @@
+Create an orthographic model reference sheet for a 3D modeler.
+Subject: November yellowtail sashimi platter with dipping sauce, lettuce, garlic and chili.
+Model-design bounds, not surveyed measurements: X 0.3819 m, Y 0.290282 m, Z 0.034 m. Z up, front negative Y; floor-center origin. All unspecified details are fictional artistic settings. Preserve confirmed facts listed in spec.md.
+Layout: 4 views in a 2x2 grid — FRONT, RIGHT SIDE, BACK, TOP — all at exactly the same scale, aligned to a faint 1-meter grid, true orthographic projection, no perspective.
+Style: stylized miniature diorama, soft bevels, simplified forms, clean dark outlines, flat even lighting, no cast shadows, light gray background.
+Include: a 1.7 m human silhouette beside each view for scale; palette swatches: #4E9A5B, #8FC9B9, #9A7350, #C8423B, #F2EFE6, #F4A6A0.
+Exclude: brand logos, readable commercial signage, copied application screens, watermarks, scenery backgrounds. Use generic brands and original sculpture designs. Written dimensions and executable blockout take precedence over any illustration.
