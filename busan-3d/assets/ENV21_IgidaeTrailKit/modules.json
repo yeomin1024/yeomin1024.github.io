@@ -1,0 +1,38 @@
+{
+  "prefix": "ENV21_IgidaeTrailKit_",
+  "seed": 20261110,
+  "modules": {
+    "Straight4": [
+      "StraightFloor",
+      "StraightPost0S0",
+      "StraightPost0S1",
+      "StraightRail0",
+      "StraightPost2S0",
+      "StraightPost2S1",
+      "StraightRail2"
+    ],
+    "Stair8": [
+      "Steps0",
+      "Steps1",
+      "Steps2",
+      "Steps3",
+      "Steps4",
+      "Steps5",
+      "Steps6",
+      "Steps7"
+    ],
+    "Bridge12": [
+      "BridgeFloor",
+      "BridgePost0S0",
+      "BridgePost0S1",
+      "BridgeRail0",
+      "BridgePost2S0",
+      "BridgePost2S1",
+      "BridgeRail2",
+      "BridgeTower0S0",
+      "BridgeTower0S1",
+      "BridgeTower1S0",
+      "BridgeTower1S1"
+    ]
+  }
+}
