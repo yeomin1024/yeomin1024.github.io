@@ -1,0 +1,18 @@
+{
+  "id": "ENV09",
+  "name": "HaeundaeBeach",
+  "dims": [
+    100.0,
+    79.0,
+    24.0
+  ],
+  "roundtrip_dims": [
+    100.0,
+    79.0,
+    24.0
+  ],
+  "triangles": 1124,
+  "parts": 15,
+  "budget": 12000,
+  "pass_": true
+}
