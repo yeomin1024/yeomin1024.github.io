@@ -1,0 +1,38 @@
+{
+  "prefix": "ENV14_CoastalRailDaritdol_",
+  "seed": 20261110,
+  "modules": {
+    "Track12": [
+      "CoastalTrackRail0",
+      "CoastalTrackRail2",
+      "CoastalTrackSleeper0",
+      "CoastalTrackSleeper1",
+      "CoastalTrackSleeper2",
+      "CoastalTrackSleeper3",
+      "CoastalTrackSleeper4",
+      "CoastalTrackSleeper5",
+      "CoastalTrackSleeper6",
+      "CoastalTrackSleeper7",
+      "CoastalTrackSleeper8",
+      "CoastalTrackSleeper9",
+      "CoastalTrackSleeper10",
+      "CoastalTrackSleeper11",
+      "CoastalTrackSleeper12",
+      "CoastalTrackSleeper13",
+      "CoastalTrackSleeper14",
+      "CoastalTrackSleeper15",
+      "CoastalTrackSleeper16",
+      "CoastalTrackSleeper17",
+      "CoastalTrackSleeper18",
+      "CoastalTrackSleeper19"
+    ],
+    "WalkPanel": [
+      "WalkGlass0",
+      "WalkRail0S0",
+      "WalkRail0S2"
+    ],
+    "Pier": [
+      "WalkPier0"
+    ]
+  }
+}
