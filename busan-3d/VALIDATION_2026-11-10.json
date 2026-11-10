@@ -1,0 +1,1200 @@
+{
+  "date": "2026-11-10",
+  "scope": "59 new drafts; existing VEH01/VEH02 validation remains in their folders",
+  "models": 55,
+  "fx": 4,
+  "checks": "inputs, common functions, names, versions, transforms, bounds, origin, triangle ceiling, glTF roundtrip; not final production/survey verification",
+  "assets": [
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "VEH03",
+      "name": "ExpressBus",
+      "dims": [
+        2.890000104904175,
+        11.0,
+        3.2999999614956756
+      ],
+      "roundtrip_dims": [
+        2.890000104904175,
+        11.0,
+        3.299999952316284
+      ],
+      "triangles": 10500,
+      "parts": 106,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV01",
+      "name": "BusanStation",
+      "dims": [
+        64.0,
+        96.0,
+        13.399999618530273
+      ],
+      "roundtrip_dims": [
+        64.0,
+        96.0,
+        13.399999618530273
+      ],
+      "triangles": 408,
+      "parts": 19,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "ENV23",
+      "name": "BusanMap3D",
+      "dims": [
+        4.0,
+        3.0,
+        0.17000000178813934
+      ],
+      "roundtrip_dims": [
+        4.0,
+        3.0,
+        0.17000000178813934
+      ],
+      "triangles": 120,
+      "parts": 5,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "SF01",
+      "name": "BusStop",
+      "dims": [
+        8.0,
+        2.4000000953674316,
+        2.799999952316284
+      ],
+      "roundtrip_dims": [
+        8.0,
+        2.4000000953674316,
+        2.799999952316284
+      ],
+      "triangles": 564,
+      "parts": 8,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "SF02",
+      "name": "BusInterior",
+      "dims": [
+        1.840000033378601,
+        0.762499988079071,
+        2.200000047683716
+      ],
+      "roundtrip_dims": [
+        1.840000033378601,
+        0.762499988079071,
+        2.200000047683716
+      ],
+      "triangles": 716,
+      "parts": 11,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "CHR01",
+      "name": "TravelerA",
+      "dims": [
+        1.5899999141693115,
+        0.3149999976158142,
+        1.6999999284744263
+      ],
+      "roundtrip_dims": [
+        1.5899999141693115,
+        0.3149999976158142,
+        1.6999999284744263
+      ],
+      "triangles": 1304,
+      "parts": 15,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "CHR02",
+      "name": "TravelerB",
+      "dims": [
+        1.5151764154434204,
+        0.3001764714717865,
+        1.6200000047683716
+      ],
+      "roundtrip_dims": [
+        1.5151764154434204,
+        0.3001764714717865,
+        1.6200000047683716
+      ],
+      "triangles": 1304,
+      "parts": 15,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "VEH04",
+      "name": "VillageBus",
+      "dims": [
+        2.2549999952316284,
+        8.120000839233398,
+        2.9000000997385706
+      ],
+      "roundtrip_dims": [
+        2.2549999952316284,
+        8.120000839233398,
+        2.9000000953674316
+      ],
+      "triangles": 996,
+      "parts": 12,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "VEH05",
+      "name": "BeachTrain",
+      "dims": [
+        3.0,
+        12.199999809265137,
+        2.7699999852976527
+      ],
+      "roundtrip_dims": [
+        3.0,
+        12.199999809265137,
+        2.7699999809265137
+      ],
+      "triangles": 1104,
+      "parts": 13,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "VEH06",
+      "name": "SkyCapsule",
+      "dims": [
+        3.200000047683716,
+        8.0,
+        10.100000381469727
+      ],
+      "roundtrip_dims": [
+        3.200000047683716,
+        8.0,
+        10.100000381469727
+      ],
+      "triangles": 1016,
+      "parts": 11,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "ENV02",
+      "name": "GamcheonHouseKit",
+      "dims": [
+        19.619998931884766,
+        3.119999885559082,
+        9.149999618530273
+      ],
+      "roundtrip_dims": [
+        19.619998931884766,
+        3.119999885559082,
+        9.149999618530273
+      ],
+      "triangles": 1428,
+      "parts": 16,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "ENV07",
+      "name": "HuinnyeoulVillage",
+      "dims": [
+        40.5,
+        80.0,
+        14.84999942779541
+      ],
+      "roundtrip_dims": [
+        40.5,
+        80.0,
+        14.84999942779541
+      ],
+      "triangles": 2136,
+      "parts": 43,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV09",
+      "name": "HaeundaeBeach",
+      "dims": [
+        100.0,
+        79.0,
+        24.0
+      ],
+      "roundtrip_dims": [
+        100.0,
+        79.0,
+        24.0
+      ],
+      "triangles": 1124,
+      "parts": 15,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV11",
+      "name": "YonggungsaTemple",
+      "dims": [
+        30.0,
+        60.14999961853027,
+        28.360000610351562
+      ],
+      "roundtrip_dims": [
+        30.0,
+        60.14999961853027,
+        28.360000610351562
+      ],
+      "triangles": 4496,
+      "parts": 142,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "ENV14",
+      "name": "CoastalRailDaritdol",
+      "dims": [
+        28.497499465942383,
+        92.41655731201172,
+        21.130001068115234
+      ],
+      "roundtrip_dims": [
+        28.497499465942383,
+        92.41655731201172,
+        21.130001068115234
+      ],
+      "triangles": 2040,
+      "parts": 171,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "ENV17",
+      "name": "GwanganBridge",
+      "dims": [
+        7420.0,
+        27.0,
+        100.0
+      ],
+      "roundtrip_dims": [
+        7420.0,
+        27.0,
+        100.0
+      ],
+      "triangles": 2232,
+      "parts": 155,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV20",
+      "name": "OryukdoSkywalk",
+      "dims": [
+        39.25,
+        34.0,
+        36.12999725341797
+      ],
+      "roundtrip_dims": [
+        39.25,
+        34.0,
+        36.12999725341797
+      ],
+      "triangles": 1980,
+      "parts": 80,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "ENV21",
+      "name": "IgidaeTrailKit",
+      "dims": [
+        13.059999942779541,
+        12.119999885559082,
+        3.0
+      ],
+      "roundtrip_dims": [
+        13.059999942779541,
+        12.119999885559082,
+        3.0
+      ],
+      "triangles": 504,
+      "parts": 27,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "PRP01",
+      "name": "Suitcase",
+      "dims": [
+        0.44999998807907104,
+        0.27650000154972076,
+        0.9749999651114409
+      ],
+      "roundtrip_dims": [
+        0.44999998807907104,
+        0.27650000154972076,
+        0.9749999642372131
+      ],
+      "triangles": 340,
+      "parts": 8,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "PRP03",
+      "name": "Smartphone",
+      "dims": [
+        0.07500000298023224,
+        0.009200000204145908,
+        0.1550000011920929
+      ],
+      "roundtrip_dims": [
+        0.07500000298023224,
+        0.009200000204145908,
+        0.1550000011920929
+      ],
+      "triangles": 216,
+      "parts": 3,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "PRP04",
+      "name": "TransitCard",
+      "dims": [
+        0.08560000360012054,
+        0.0009800000116229057,
+        0.05398000031709671
+      ],
+      "roundtrip_dims": [
+        0.08560000360012054,
+        0.0009800000116229057,
+        0.05398000031709671
+      ],
+      "triangles": 216,
+      "parts": 3,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD01",
+      "name": "Milmyeon",
+      "dims": [
+        0.4725000113248825,
+        0.23000000417232513,
+        0.0925000011920929
+      ],
+      "roundtrip_dims": [
+        0.4725000113248825,
+        0.23000000417232513,
+        0.0925000011920929
+      ],
+      "triangles": 2800,
+      "parts": 75,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD02",
+      "name": "SeedHotteok",
+      "dims": [
+        0.0949999950826168,
+        0.08320000022649765,
+        0.14000000059604645
+      ],
+      "roundtrip_dims": [
+        0.0949999950826168,
+        0.08320000022649765,
+        0.14000000059604645
+      ],
+      "triangles": 1884,
+      "parts": 35,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD03",
+      "name": "YubuGlassNoodle",
+      "dims": [
+        0.27246716618537903,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "roundtrip_dims": [
+        0.27246716618537903,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "triangles": 1884,
+      "parts": 49,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD04",
+      "name": "Gomjangeo",
+      "dims": [
+        0.39500001072883606,
+        0.23999999463558197,
+        0.04600000008940697
+      ],
+      "roundtrip_dims": [
+        0.39500001072883606,
+        0.23999999463558197,
+        0.04600000008940697
+      ],
+      "triangles": 2076,
+      "parts": 21,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD05",
+      "name": "Bokguk",
+      "dims": [
+        0.27246716618537903,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "roundtrip_dims": [
+        0.27246716618537903,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "triangles": 1524,
+      "parts": 45,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD06",
+      "name": "AbaloneJukSeafood",
+      "dims": [
+        0.5130486488342285,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "roundtrip_dims": [
+        0.5130486488342285,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "triangles": 3008,
+      "parts": 71,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD07",
+      "name": "BangeoSashimi",
+      "dims": [
+        0.38189999759197235,
+        0.290282279253006,
+        0.03400000184774399
+      ],
+      "roundtrip_dims": [
+        0.38189999759197235,
+        0.2902822941541672,
+        0.03400000184774399
+      ],
+      "triangles": 3908,
+      "parts": 79,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD08",
+      "name": "Daegutang",
+      "dims": [
+        0.27246716618537903,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "roundtrip_dims": [
+        0.27246716618537903,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "triangles": 1452,
+      "parts": 39,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD09",
+      "name": "DwaejiGukbap",
+      "dims": [
+        0.5220000147819519,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "roundtrip_dims": [
+        0.5220000147819519,
+        0.23000000417232513,
+        0.07850000262260437
+      ],
+      "triangles": 2596,
+      "parts": 92,
+      "budget": 40000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 6,
+      "id": "FX01",
+      "fx": true,
+      "pass_": true,
+      "nodes": 8
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 6,
+      "id": "FX02",
+      "fx": true,
+      "pass_": true,
+      "nodes": 2
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "VEH07",
+      "name": "BackgroundCar",
+      "dims": [
+        5.8500001430511475,
+        5.199999809265137,
+        2.5499999562503093
+      ],
+      "roundtrip_dims": [
+        5.8500001430511475,
+        5.199999809265137,
+        2.549999952316284
+      ],
+      "triangles": 892,
+      "parts": 14,
+      "budget": 3000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "VEH08",
+      "name": "Boats",
+      "dims": [
+        44.5,
+        70.0,
+        25.200000762939453
+      ],
+      "roundtrip_dims": [
+        44.5,
+        70.0,
+        25.200000762939453
+      ],
+      "triangles": 440,
+      "parts": 9,
+      "budget": 3000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV03",
+      "name": "GamcheonObservatory",
+      "dims": [
+        10.0,
+        8.079999923706055,
+        2.049999952316284
+      ],
+      "roundtrip_dims": [
+        10.0,
+        8.079999923706055,
+        2.049999952316284
+      ],
+      "triangles": 640,
+      "parts": 11,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV04",
+      "name": "BiffSquareStall",
+      "dims": [
+        18.119998931884766,
+        16.0,
+        5.669999599456787
+      ],
+      "roundtrip_dims": [
+        18.119998931884766,
+        16.0,
+        5.669999599456787
+      ],
+      "triangles": 1184,
+      "parts": 13,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "ENV05",
+      "name": "MarketAlleyKit",
+      "dims": [
+        11.199999809265137,
+        5.059999942779541,
+        2.8500001430511475
+      ],
+      "roundtrip_dims": [
+        11.199999809265137,
+        5.059999942779541,
+        2.8500001430511475
+      ],
+      "triangles": 912,
+      "parts": 13,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV06",
+      "name": "YeongdoBridge",
+      "dims": [
+        80.0,
+        12.0,
+        8.350000381469727
+      ],
+      "roundtrip_dims": [
+        80.0,
+        12.0,
+        8.350000381469727
+      ],
+      "triangles": 84,
+      "parts": 8,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV08",
+      "name": "JagalchiMarket",
+      "dims": [
+        47.681331634521484,
+        33.560001373291016,
+        19.28974151611328
+      ],
+      "roundtrip_dims": [
+        47.68133544921875,
+        33.560001373291016,
+        19.28974151611328
+      ],
+      "triangles": 1428,
+      "parts": 16,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "ENV10",
+      "name": "HaeundaeSkyline",
+      "dims": [
+        225.0,
+        120.0,
+        411.6000061035156
+      ],
+      "roundtrip_dims": [
+        225.0,
+        120.0,
+        411.6000061035156
+      ],
+      "triangles": 384,
+      "parts": 9,
+      "budget": 5000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV12",
+      "name": "YeonhwariHarbor",
+      "dims": [
+        28.0,
+        18.0,
+        2.674999952316284
+      ],
+      "roundtrip_dims": [
+        28.0,
+        18.0,
+        2.674999952316284
+      ],
+      "triangles": 556,
+      "parts": 10,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV13",
+      "name": "SongjeongStation",
+      "dims": [
+        24.0,
+        24.870779037475586,
+        5.290393829345703
+      ],
+      "roundtrip_dims": [
+        24.0,
+        24.870779037475586,
+        5.290393829345703
+      ],
+      "triangles": 972,
+      "parts": 50,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV15",
+      "name": "CheongsapoLighthouse",
+      "dims": [
+        24.0,
+        30.0,
+        10.200000762939453
+      ],
+      "roundtrip_dims": [
+        24.0,
+        30.0,
+        10.200000762939453
+      ],
+      "triangles": 328,
+      "parts": 7,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "ENV16",
+      "name": "DongbaekIsland",
+      "dims": [
+        35.30000114440918,
+        22.0,
+        10.0
+      ],
+      "roundtrip_dims": [
+        35.30000114440918,
+        22.0,
+        10.0
+      ],
+      "triangles": 588,
+      "parts": 13,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV18",
+      "name": "GwangalliMillak",
+      "dims": [
+        100.0,
+        52.05999755859375,
+        9.149999618530273
+      ],
+      "roundtrip_dims": [
+        100.0,
+        52.05999755859375,
+        9.149999618530273
+      ],
+      "triangles": 468,
+      "parts": 8,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "ENV19",
+      "name": "DroneShow",
+      "dims": [
+        0.6902260184288025,
+        0.6902260184288025,
+        0.1875
+      ],
+      "roundtrip_dims": [
+        0.6902259588241577,
+        0.6902259588241577,
+        0.1875
+      ],
+      "triangles": 500,
+      "parts": 11,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "ENV22",
+      "name": "Chinatown",
+      "dims": [
+        18.0,
+        20.0,
+        5.549999713897705
+      ],
+      "roundtrip_dims": [
+        18.0,
+        20.0,
+        5.549999713897705
+      ],
+      "triangles": 1008,
+      "parts": 13,
+      "budget": 3000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "SF03",
+      "name": "StreetFurnitureKit",
+      "dims": [
+        8.5,
+        2.0799999237060547,
+        4.050000190734863
+      ],
+      "roundtrip_dims": [
+        8.5,
+        2.0799999237060547,
+        4.050000190734863
+      ],
+      "triangles": 556,
+      "parts": 14,
+      "budget": 3000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "SF04",
+      "name": "LuggageCounter",
+      "dims": [
+        2.5,
+        2.375,
+        2.0249998569488525
+      ],
+      "roundtrip_dims": [
+        2.5,
+        2.375,
+        2.0249998569488525
+      ],
+      "triangles": 468,
+      "parts": 8,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "CHR03",
+      "name": "Crowd",
+      "dims": [
+        1.2699999809265137,
+        0.3149999976158142,
+        1.6999999284744263
+      ],
+      "roundtrip_dims": [
+        1.2699999809265137,
+        0.3149999976158142,
+        1.6999999284744263
+      ],
+      "triangles": 208,
+      "parts": 10,
+      "budget": 280,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 12,
+      "id": "CHR04",
+      "name": "Seagull",
+      "dims": [
+        1.6200000047683716,
+        0.4699999988079071,
+        0.4099999964237213
+      ],
+      "roundtrip_dims": [
+        1.6200000047683716,
+        0.4699999988079071,
+        0.4099999964237213
+      ],
+      "triangles": 470,
+      "parts": 8,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "PRP02",
+      "name": "Bags",
+      "dims": [
+        0.7699999809265137,
+        0.2800000011920929,
+        0.7200000286102295
+      ],
+      "roundtrip_dims": [
+        0.7699999809265137,
+        0.2800000011920929,
+        0.7200000286102295
+      ],
+      "triangles": 552,
+      "parts": 7,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "PRP05",
+      "name": "StampMap",
+      "dims": [
+        0.30000001192092896,
+        0.0003000000142492354,
+        0.20999999344348907
+      ],
+      "roundtrip_dims": [
+        0.30000001192092896,
+        0.0003000000142492354,
+        0.20999999344348907
+      ],
+      "triangles": 36,
+      "parts": 4,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "PRP06",
+      "name": "Camera",
+      "dims": [
+        0.11999999731779099,
+        0.10099999606609344,
+        0.07500000298023224
+      ],
+      "roundtrip_dims": [
+        0.11999999731779099,
+        0.10099999606609344,
+        0.07500000298023224
+      ],
+      "triangles": 292,
+      "parts": 4,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 13,
+      "id": "PRP07",
+      "name": "ShoeCovers",
+      "dims": [
+        0.34999997913837433,
+        0.30000001192092896,
+        0.11500000208616257
+      ],
+      "roundtrip_dims": [
+        0.34999997913837433,
+        0.30000001192092896,
+        0.11500000208616257
+      ],
+      "triangles": 664,
+      "parts": 5,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD10",
+      "name": "DumplingFishcake",
+      "dims": [
+        0.3100000023841858,
+        0.1599999964237213,
+        0.1899999976158142
+      ],
+      "roundtrip_dims": [
+        0.3100000023841858,
+        0.1599999964237213,
+        0.1899999976158142
+      ],
+      "triangles": 1236,
+      "parts": 10,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 14,
+      "id": "FOOD11",
+      "name": "Coffee",
+      "dims": [
+        0.14900484681129456,
+        0.14900484681129456,
+        0.08699999749660492
+      ],
+      "roundtrip_dims": [
+        0.14900484681129456,
+        0.14900484681129456,
+        0.08699999749660492
+      ],
+      "triangles": 1300,
+      "parts": 57,
+      "budget": 12000,
+      "pass_": true
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 6,
+      "id": "FX03",
+      "fx": true,
+      "pass_": true,
+      "nodes": 6
+    },
+    {
+      "version": "v1.0",
+      "status": "초안",
+      "files": 8,
+      "id": "FX04",
+      "fx": true,
+      "pass_": true,
+      "nodes": 2
+    }
+  ]
+}
