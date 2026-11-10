@@ -1,0 +1,18 @@
+{
+  "prefix": "ENV07_HuinnyeoulVillage_",
+  "seed": 20261110,
+  "modules": {
+    "Path4": [
+      "PathModule"
+    ],
+    "TunnelArch": [
+      "TunnelArch0"
+    ],
+    "House": [
+      "Village0Wall",
+      "Village0Roof",
+      "Village0Door",
+      "Village0Window"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ENV07",
+  "name": "HuinnyeoulVillage",
+  "dims": [
+    40.5,
+    80.0,
+    14.84999942779541
+  ],
+  "roundtrip_dims": [
+    40.5,
+    80.0,
+    14.84999942779541
+  ],
+  "triangles": 2136,
+  "parts": 43,
+  "budget": 40000,
+  "pass_": true
+}
