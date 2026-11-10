@@ -1,0 +1,20 @@
+{
+  "prefix": "VEH06_SkyCapsule_",
+  "seed": 20261110,
+  "modules": {
+    "RailStraight": [
+      "Pier0",
+      "ElevatedRail0",
+      "Pier1",
+      "ElevatedRail1"
+    ],
+    "Capsule": [
+      "CapsuleFloor",
+      "CapsuleGlass",
+      "CapsuleRoof",
+      "Seat0",
+      "Seat1",
+      "Fan"
+    ]
+  }
+}
