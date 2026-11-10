@@ -1,0 +1,18 @@
+{
+  "id": "ENV12",
+  "name": "YeonhwariHarbor",
+  "dims": [
+    28.0,
+    18.0,
+    2.674999952316284
+  ],
+  "roundtrip_dims": [
+    28.0,
+    18.0,
+    2.674999952316284
+  ],
+  "triangles": 556,
+  "parts": 10,
+  "budget": 12000,
+  "pass_": true
+}
