@@ -1,4 +1,4 @@
-# VERSION: v1.1.0 — 2026-11-10 — 오프닝(1일차 앞부분) 3D 장면 구성·렌더 (지형 부드러운 음영, 핀 축소, 샘플 설정)
+# VERSION: v1.2.0 — 2026-11-11 — 오프닝(1일차 앞부분) 3D 장면 구성·렌더 (MAP04 탈것 토큰 사용)
 """
 오프닝 3D 장면: MAP01 지도 위에서 카메라 이동, 1일차 첫 구간(부산역 → 감천) 루트 그리기,
 KTX·버스 토큰 이동. 글자·사진 자리는 opening_overlay.py 가 2D 로 얹는다.
@@ -10,7 +10,7 @@ KTX·버스 토큰 이동. 글자·사진 자리는 opening_overlay.py 가 2D �
   <out>/frame_0001.png ...  (3D 렌더)
   <out>/screen_points.json  (프레임별 핀·토큰의 화면 좌표 → 글자 위치용)
 
-탈것 토큰은 임시 도형이다(MAP04 설계도가 아직 없음). 설계도가 오면 Claude 가 교체한다.
+탈것 토큰은 MAP04 모델(TransitTokens.blend)에서 BusStd·KTX 를 불러온다. 표시 배율·높이는 timeline.json tokens.
 """
 import json
 import logging
@@ -51,62 +51,6 @@ def args():
     if not out:
         sys.exit("--out <폴더> 가 필요함")
     return out, stills, frames
-
-
-def hex_lin(h):
-    s = h.lstrip("#")
-    out = []
-    for k in (0, 2, 4):
-        c = int(s[k:k + 2], 16) / 255
-        out.append(c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4)
-    return (*out, 1.0)
-
-
-def mat(name, hex_color, emission=0.0):
-    m = bpy.data.materials.get(name) or bpy.data.materials.new(name)
-    m.use_nodes = True
-    b = next(n for n in m.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
-    b.inputs["Base Color"].default_value = hex_lin(hex_color)
-    b.inputs["Roughness"].default_value = 0.5
-    if emission:
-        k = "Emission Color" if "Emission Color" in b.inputs else "Emission"
-        b.inputs[k].default_value = hex_lin(hex_color)
-        b.inputs["Emission Strength"].default_value = emission
-    return m
-
-
-def box(name, size, loc, material):
-    import bmesh
-    bm = bmesh.new()
-    bmesh.ops.create_cube(bm, size=1.0)
-    bmesh.ops.scale(bm, vec=Vector(size), verts=bm.verts)
-    bmesh.ops.translate(bm, vec=Vector(loc), verts=bm.verts)
-    me = bpy.data.meshes.new(name)
-    bm.to_mesh(me); bm.free()
-    me.materials.append(material)
-    return me
-
-
-def token(name, length, color, nose=False):
-    """임시 토큰: +X 방향을 보는 둥근 상자 + 창문 띠. 1 unit = 10 km 지도용 아이콘 크기."""
-    import bmesh
-    w, h = length * 0.32, length * 0.30
-    body = mat(f"M_Temp_{name}_Body", color, emission=0.3)
-    win = mat(f"M_Temp_{name}_Window", "#121A33")
-    me = box(f"{name}_mesh", (length, w, h), (0, 0, h / 2 + length * 0.06), body)
-    bm = bmesh.new(); bm.from_mesh(me)
-    if nose:   # 앞쪽 위 모서리를 깎아 고속열차처럼
-        front_top = [v for v in bm.verts if v.co.x > 0 and v.co.z > h / 2 + length * 0.06]
-        for v in front_top:
-            v.co.x -= length * 0.25
-    bm.to_mesh(me); bm.free()
-    obj = bpy.data.objects.new(name, me)
-    win_me = box(f"{name}_win", (length * 0.86, w * 1.02, h * 0.28), (0, 0, h * 0.72 + length * 0.06), win)
-    wobj = bpy.data.objects.new(f"{name}_Window", win_me)
-    wobj.parent = obj
-    bev = obj.modifiers.new("Bevel", "BEVEL"); bev.width = length * 0.05; bev.segments = 3
-    obj["temporary"] = "MAP04 설계도 전 임시 도형"
-    return obj, wobj
 
 
 def spline_points(obj):
@@ -183,36 +127,59 @@ def main():
             return fc.evaluate(f)
         sc.frame_set(f); return cu.bevel_factor_end
 
-    # ── 토큰 ──
-    col = bpy.data.collections.new("V01_OpeningTemp"); sc.collection.children.link(col)
-    bus, bus_w = token("TempBusToken", 0.035, TL["bus_token"]["color"])
-    ktx, ktx_w = token("TempKTXToken", 0.06, TL["ktx_token"]["color"], nose=True)
-    for o in (bus, bus_w, ktx, ktx_w):
+    # ── 탈것 토큰: MAP04 모델을 불러온다 ──
+    T = TL["tokens"]
+    col = bpy.data.collections.new("V01_Opening"); sc.collection.children.link(col)
+    tok_blend = os.path.normpath(os.path.join(HERE, T["blend"]))
+    want = ("MAP04_TransitTokens_BusStd", "MAP04_TransitTokens_KTX")
+    with bpy.data.libraries.load(tok_blend, link=False) as (src, dst):
+        dst.objects = [n for n in src.objects if n.startswith(want)]
+    for o in dst.objects:
         col.objects.link(o)
+    bus, ktx = bpy.data.objects[T["bus_root"]], bpy.data.objects[T["ktx_root"]]
+    wheels = [o for o in bus.children if "Wheel" in o.name]
+    for w in wheels:
+        w.rotation_mode = "ZYX"            # (0, 90°, 회전) → 원기둥 축 둘레로 굴러감
+    S, LIFT, DAY1_LIFT = T["scale"], T["lift"], 0.004   # 1일차 루트 점은 지면 + 0.004
+    def face(dx, dy):                       # 토큰 정면이 -Y 라서: yaw = atan2(Δx, -Δy) (MAP04 spec 10번)
+        return math.atan2(dx, -dy)
     b0, b1 = TL["bus_token"]["start"], TL["bus_token"]["end"]
+    prev, rolled = None, 0.0
     for f in range(fs, fe + 1):
-        visible = b0 - 6 <= f <= b1 + 40
+        visible = b0 - 6 <= f <= TL["bus_token"].get("hide_after", b1)
         d = route_fraction(min(max(f, b0), b1)) * cum[-1]
-        p, ang = point_at(pts, cum, d)
-        bus.location = p + Vector((0, 0, 0.002)); bus.rotation_euler = (0, 0, ang)
-        bus.scale = (1, 1, 1) if visible else (0, 0, 0)
-        bus.keyframe_insert("location", frame=f); bus.keyframe_insert("rotation_euler", frame=f); bus.keyframe_insert("scale", frame=f)
-    # KTX: 부산진(1003 경유 지점과 같은 위치) → 부산역, 루트 점에서 높이를 가져온다
+        p, _ = point_at(pts, cum, d)
+        p2, _ = point_at(pts, cum, d + 0.01)
+        if prev is not None:
+            rolled += (p - prev).length / S / T["bus_wheel_radius_m"]   # 굴러간 각도(rad) = 토큰 기준 이동거리 ÷ 반지름
+        prev = p.copy()
+        bus.location = p + Vector((0, 0, LIFT - DAY1_LIFT))
+        bus.rotation_euler = (0, 0, face(p2.x - p.x, p2.y - p.y))
+        bus.scale = (S, S, S) if visible else (0, 0, 0)
+        for k in ("location", "rotation_euler", "scale"):
+            bus.keyframe_insert(k, frame=f)
+        for w in wheels:
+            w.rotation_euler = (0, math.radians(90), -rolled)
+            w.keyframe_insert("rotation_euler", frame=f)
+    # KTX: 부산진(1003 경유 지점과 같은 위치) → 부산역
     st = pin(TL["ktx_token"]["to_place"]).location.copy()
     vp = MB["VIA_POINTS"][TL["ktx_token"]["from_via"]]
     bj = Vector(MB["latlon_to_xy"](vp["lat"], vp["lon"]))
     near_bj = min(pts, key=lambda q: (q.xy - bj).length).copy()   # 부산진역 정류장과 가장 가까운 루트 점(높이 포함)
     k0, k1 = TL["ktx_token"]["start"], TL["ktx_token"]["end"]
-    ang = math.atan2(st.y - near_bj.y, st.x - near_bj.x)
+    a0 = near_bj + Vector((0, 0, LIFT - DAY1_LIFT))
+    a1 = st + Vector((0, 0, LIFT))
     for f in range(fs, fe + 1):
         t = min(max((f - k0) / (k1 - k0), 0.0), 1.0)
         t = 1 - (1 - t) ** 3   # 도착하며 감속
-        ktx.location = near_bj.lerp(st + Vector((0, 0, 0.004)), t)
-        ktx.rotation_euler = (0, 0, ang)
-        ktx.scale = (1, 1, 1) if k0 - 6 <= f <= 252 else (0, 0, 0)
-        ktx.keyframe_insert("location", frame=f); ktx.keyframe_insert("rotation_euler", frame=f); ktx.keyframe_insert("scale", frame=f)
-    log("TOKENS", bus=f"{b0}-{b1}", ktx=f"{k0}-{k1}", ktx_from=f"{near_bj.x:.4f},{near_bj.y:.4f}",
-        busanjin_xy=f"{bj.x:.4f},{bj.y:.4f}", gap=f"{(near_bj.xy - bj).length:.4f}", note="임시 도형(MAP04 전)")
+        ktx.location = a0.lerp(a1, t)
+        ktx.rotation_euler = (0, 0, face(a1.x - a0.x, a1.y - a0.y))
+        ktx.scale = (S, S, S) if k0 - 6 <= f <= 252 else (0, 0, 0)
+        for k in ("location", "rotation_euler", "scale"):
+            ktx.keyframe_insert(k, frame=f)
+    log("TOKENS", source=os.path.relpath(tok_blend, HERE), bus=T["bus_root"], ktx=T["ktx_root"], scale=S, lift=LIFT,
+        bus_frames=f"{b0}-{b1}", ktx_frames=f"{k0}-{k1}", ktx_from=f"{near_bj.x:.4f},{near_bj.y:.4f}",
+        busanjin_xy=f"{bj.x:.4f},{bj.y:.4f}", wheel_turns=f"{rolled / (2 * math.pi):.1f}")
 
     # ── 카메라 ──
     cd = bpy.data.cameras.new("V01_Cam"); cd.lens = TL["camera_lens_mm"]; cd.clip_start = 0.005; cd.clip_end = 50
@@ -237,7 +204,7 @@ def main():
             top = o.matrix_world @ Vector((0, 0, 0.075))   # 핀 머리 조금 위 (scale 반영)
             v = world_to_camera_view(sc, cam, top)
             row[k] = [round(v.x * W, 1), round((1 - v.y) * H, 1), round(v.z, 4)]
-        v = world_to_camera_view(sc, cam, bus.matrix_world.translation + Vector((0, 0, 0.03)))
+        v = world_to_camera_view(sc, cam, bus.matrix_world.translation + Vector((0, 0, 0.035)))
         row["bus"] = [round(v.x * W, 1), round((1 - v.y) * H, 1), round(v.z, 4)]
         screen[f] = row
     with open(os.path.join(out, "screen_points.json"), "w", encoding="utf-8") as fh:
@@ -266,5 +233,6 @@ def main():
 main()
 
 # CHANGELOG
+# v1.2.0 — 2026-11-11 — 임시 상자 토큰 → MAP04 BusStd·KTX, 정면 -Y 기준 방향, 바퀴 굴림, 배율 0.03
 # v1.1.0 — 2026-11-10 — 지형 부드러운 음영, 핀 크기 조절, 렌더 샘플을 timeline.json 에서 읽음
 # v1.0.0 — 2026-11-10 — 최초 작성

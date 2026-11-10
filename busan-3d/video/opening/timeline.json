@@ -1,7 +1,7 @@
 {
-  "version": "v1.1",
+  "version": "v1.2",
   "date": "2026-11-10",
-  "note": "오프닝(1일차 앞부분) 타임라인. opening_blender.py 와 opening_overlay.py 가 같이 읽는다. 시간·버스·정류장 문구는 FACTS.md 1장 그대로. v1.1: 가까운 장면 카메라를 뒤로·위로(지형 각 줄이기), 핀 0.6배, 지형 부드러운 음영, 렌더 샘플 8. 3D 는 75%(960x540)로 렌더하고 글자는 1280x720 에서 얹는다(초안 속도).",
+  "note": "오프닝(1일차 앞부분) 타임라인. opening_blender.py 와 opening_overlay.py 가 같이 읽는다. 시간·버스·정류장 문구는 FACTS.md 1장 그대로. v1.1: 가까운 장면 카메라를 뒤로·위로(지형 각 줄이기), 핀 0.6배, 지형 부드러운 음영, 렌더 샘플 8. 3D 는 75%(960x540)로 렌더하고 글자는 1280x720 에서 얹는다(초안 속도). v1.2: 임시 아이콘 대신 MAP04 탈것 토큰(BusStd=61번 일반버스, KTX) 사용. 표시 배율 0.03·지면 위 0.015 (MAP04 설계도 0.08·0.04 는 지도 미리보기에서 너무 커서 조정안 적용).",
   "fps": 24,
   "resolution": [
     1280,
@@ -188,15 +188,14 @@
     "end": 408,
     "color": "#2E6FB7",
     "label": "61번 / 서구2-2",
-    "temporary": true
+    "hide_after": 480
   },
   "ktx_token": {
     "start": 150,
     "end": 200,
     "from_via": "busanjin",
     "to_place": "busan_station",
-    "color": "#F2EFE6",
-    "temporary": true
+    "color": "#F2EFE6"
   },
   "labels": [
     {
@@ -292,7 +291,7 @@
       "글꼴  Noto Sans CJK (SIL Open Font License)"
     ]
   },
-  "draft_tag": "오프닝 초안 v1 · 실제 사진 미삽입 · 탈것 아이콘 임시",
+  "draft_tag": "오프닝 초안 v2 · 실제 사진 미삽입",
   "check_frames": [
     40,
     110,
@@ -309,5 +308,15 @@
     "pin_scale": 0.6,
     "terrain_smooth": true,
     "resolution_percentage": 75
+  },
+  "tokens": {
+    "blend": "../../assets/MAP04_TransitTokens/TransitTokens.blend",
+    "scale": 0.03,
+    "lift": 0.015,
+    "bus_root": "MAP04_TransitTokens_BusStdRoot_L0",
+    "ktx_root": "MAP04_TransitTokens_KTXRoot_L0",
+    "bus_wheel_radius_m": 0.15,
+    "spec_scale": 0.08,
+    "spec_lift": 0.04
   }
 }
