@@ -1,0 +1,7 @@
+Create an orthographic model reference sheet for a 3D modeler.
+Subject: a fictional Korean high-speed train inspired only by a recognizable streamlined silhouette, one lead car followed by two passenger coaches. No actual manufacturer, operator or train livery. Model-design dimensions (all artistic settings, not measurements): assembled length 70 m, width 3 m, rail-contact-to-roof height 3.9 m, lead car 22 m long, each coach 23.5 m long, two coupling gaps 0.5 m. Front is negative Y, up is Z. Long low tapered rounded nose, dark cockpit glazing, continuous dark side window strips, simplified steel wheel bogies, flush passenger sliding doors. Off-white body, deep ocean blue lower sill, pale sky blue roof, charcoal glazing.
+Layout: four views in a two-by-two grid: FRONT, RIGHT SIDE, BACK, TOP, true orthographic, no perspective. Keep train length undistorted. The long side and top views use the same scale; short end views may occupy blank space but must not be enlarged. A faint one-meter grid and a 1.7 m human silhouette beside each view communicate scale. Any dimensions shown are design settings.
+Style: stylized miniature diorama, soft bevels, simplified forms, clean dark outlines, flat even lighting, no cast shadows, light gray background.
+Include a row of flat color swatches: #F2EFE6 #0E4C77 #A9D6F0 #3A3D42 #B9B6AE #DDEBFF.
+Exclude brand logos, actual livery graphics, readable signage, watermarks, scenery backgrounds.
+This is an illustrative shape reference; the written specification and executable blockout determine exact geometry.
