@@ -1,0 +1,29 @@
+{
+  "prefix": "SF03_StreetFurnitureKit_",
+  "seed": 20261110,
+  "modules": {
+    "Lamp": [
+      "LampPole",
+      "LampHead"
+    ],
+    "Bench": [
+      "Bench",
+      "BenchBack"
+    ],
+    "Bollard": [
+      "Bollard"
+    ],
+    "Rail2": [
+      "RailingFloor",
+      "RailingPost0S0",
+      "RailingPost0S1",
+      "RailingRail0",
+      "RailingPost2S0",
+      "RailingPost2S1",
+      "RailingRail2"
+    ],
+    "Bin": [
+      "Bin"
+    ]
+  }
+}
