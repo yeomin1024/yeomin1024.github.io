@@ -1,0 +1,18 @@
+{
+  "id": "ENV20",
+  "name": "OryukdoSkywalk",
+  "dims": [
+    39.25,
+    34.0,
+    36.12999725341797
+  ],
+  "roundtrip_dims": [
+    39.25,
+    34.0,
+    36.12999725341797
+  ],
+  "triangles": 1980,
+  "parts": 80,
+  "budget": 40000,
+  "pass_": true
+}
