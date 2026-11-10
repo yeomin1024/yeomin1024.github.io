@@ -1,12 +1,13 @@
 # {ID} {이름} 3D 설계도
 
-<!-- 양식 버전: v1.1 — 2026-11-10 — 3D 항목(MAP) 전용으로 범위 변경. 실제 사진은 PHOTO_SHEET_TEMPLATE, 일러스트는 IMAGE_SHEET_TEMPLATE -->
+<!-- 양식 버전: v1.2 — 2026-11-10 — ChatGPT는 설계도·참고 이미지까지, 모델링은 Claude (14번 섹션 변경). v1.1: 3D 항목(MAP) 전용 -->
 버전: v1.0 — YYYY-MM-DD — {변경 요약}
 상태: 초안 | 검토 | 확정
 폴더: `busan-3d/assets/{ID}_{영문명}/`
 
 > 이 양식의 섹션 번호와 제목은 바꾸지 않는다. 모든 숫자에 [확인] / [추정] / [설정] 태그를 붙인다.
-> 3D 항목(REGISTRY.md A표: 지도·지형·토큰·액자·패널)에만 쓴다. 지도(MAP01~03)는 `map_template.py`, 나머지는 `blockout_template.py`를 쓴다. 해당 없는 섹션은 "해당 없음"이라고 적는다.
+> 3D 항목(REGISTRY.md A표)에만 쓴다. **ChatGPT는 이 설계도와 참고 이미지까지만 만들고, 모델링은 Claude가 한다**(INSTRUCTIONS 4-1). 해당 없는 섹션은 "해당 없음"이라고 적는다.
+> Claude가 그대로 모델링할 수 있도록 5번 부품 목록의 모든 칸을 숫자로 채운다.
 
 ## 1. 개요
 | 항목 | 내용 |
@@ -108,9 +109,16 @@ Exclude: brand logos, readable signage text, watermarks, scenery backgrounds.
 | 값 | 현재 값 | 태그 | 영향도 (상·중·하) | 확정에 필요한 사진 (대상·각도) |
 |---|---|---|---|---|
 
-## 14. 블록아웃 스크립트
-- 파일: 지도는 `map_build.py`(`templates/map_template.py` 복사본, `1. 설정` 블록만 채움), 나머지는 `blockout.py`(`templates/blockout_template.py` 복사본, `1. 에셋 정보`·`2. 재질`·`3. 부품` 블록만 채움)
-- 실행 후 확인할 로그: `[REPORT] dims_m=... expected_m=... max_err_m=...` (1 cm 넘으면 WARNING), `triangles=... budget=...`
+## 14. Claude에게 전달 (모델링 요청)
+| 항목 | 내용 |
+|---|---|
+| 모델링 기준 | 5번 부품 목록 + 3번 치수표 + 8번 재질표 |
+| 전체 크기 목표 | X × Y × Z (m) — Claude가 실행 후 1 cm 넘게 다르면 알림 |
+| 삼각형 목표 | |
+| 참고 이미지 | `images/` 파일 이름 (모양·색 참고용, 치수 기준 아님) |
+| 꼭 지킬 것 | |
+| Claude가 정해도 되는 것 | (예: 베벨 세그먼트 수, 분할 수) |
+| 결과물 위치 | Claude가 `blockout.py`, `{영문명}.blend`, `{영문명}.glb`, `previews/`, `validation.md`를 이 폴더에 저장 |
 
 ## (종류별 추가 섹션)
 해당 없음 (v1의 키트·캐릭터·음식 3D 섹션은 폐기됨)

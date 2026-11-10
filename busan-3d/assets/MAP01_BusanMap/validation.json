@@ -1,0 +1,55 @@
+{
+  "map": "MAP01_BusanMap",
+  "spec_version": "v1.0",
+  "blender": "4.2.0",
+  "objects": 29,
+  "triangles_total": 193916,
+  "triangles_terrain": 180000,
+  "route_path_km": {
+    "MAP01_BusanMap_RouteDay1_L0": 28.06,
+    "MAP01_BusanMap_RouteDay2_L0": 44.8,
+    "MAP01_BusanMap_RouteDay3_L0": 26.89
+  },
+  "pin_ground_elevation_m": {
+    "busan_station": 14.2,
+    "gamcheon": 97.8,
+    "biff": 12.7,
+    "gukje": 9.5,
+    "yeongdo_bridge": 0.0,
+    "huinnyeoul": 7.9,
+    "jagalchi": 11.1,
+    "haeundae_beach": 3.5,
+    "haeundae_station": 6.8,
+    "yonggungsa": 19.2,
+    "yeonhwari": 0.0,
+    "songjeong_beach": 1.4,
+    "songjeong_station": 6.7,
+    "daritdol": 18.8,
+    "cheongsapo": 10.9,
+    "mipo": 13.0,
+    "nurimaru": 20.9,
+    "millak": 8.0,
+    "gwangalli": 0.0,
+    "gwangan_bridge": 0.0,
+    "kyungsung": 12.2,
+    "oryukdo_skywalk": 26.7,
+    "oryukdo": 3.8,
+    "igidae_bridge": 29.5,
+    "dongsaengmal": 18.0
+  },
+  "heightmap": {
+    "path": "dem_busan_cop30.png",
+    "bounds": [
+      35.05,
+      128.98,
+      35.25,
+      129.26
+    ],
+    "max_elevation_m": 640.0,
+    "subdiv": 300
+  },
+  "files": {
+    "blend_MB": 3.61,
+    "glb_MB": 11.54
+  }
+}

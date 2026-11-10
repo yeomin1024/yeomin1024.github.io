@@ -1,10 +1,13 @@
 # 작업 기록 (CHANGELOG)
 
-버전: v1.1.0 — 2026-11-10 — v2.0.0 방식 변경 기록 추가 (Codex v1 기록 유지)
+버전: v1.2.0 — 2026-11-10 — v2.1.0 역할 분담, MAP01 완성 기록 추가
 
 새 기록은 **맨 위**에 한 줄씩 추가한다.
 형식: `- 날짜 | ID | 버전 | 무엇을 왜 바꿨는지`
 
+- 2026-11-10 | MAP01~03 | v1.0 | Claude: Copernicus DEM으로 높이 이미지 생성(dem_process.py), 지도 모델링(map_build.py), 미리보기·.blend·.glb(build_export.py). 핀 25곳 지면 높이 = 원자료(차이 0.0 m), 삼각형 193,916. 높이 이미지 색 변환 버그·해안선 계단·루트 색 날아감 수정 (validation.md)
+- 2026-11-10 | 템플릿 | map_template v1.1.0 | 실제 버스 경유 정류장 7곳(VIA_POINTS), 지형을 따르는 루트, 높이 이미지 기반 바다·땅 색, Non-Color 읽기, 일차별 루트 높이 차
+- 2026-11-10 | 프로젝트 | v2.1.0 | 3D 역할 분담: ChatGPT는 설계도·참고 이미지·연출 의도까지, 모델링은 Claude (INSTRUCTIONS 4-1, REGISTRY 담당 열, SPEC_TEMPLATE v1.2)
 - 2026-11-10 | 프로젝트 | v2.0.0 | Codex의 v1 초안 61개(assets/ 아래 VEH·ENV·SF·CHR·PRP·FOOD·FX 폴더)는 지우지 않고 보관. REGISTRY.md D표에 상태 그대로 옮기고, v2 항목에서 참고할 수 있는 것을 표시
 - 2026-11-10 | 프로젝트 | v2.0.0 | 제작 방식 변경: 3D는 지도·지형·단순 소품(MAP01~08)만, 관광지·음식·실제 교통수단은 실제 사진(PH01~28, FD01~11), 캐릭터·아이콘은 일러스트(IL01~06). INSTRUCTIONS v2.0.0, REGISTRY v2.0.0, FACTS v1.1.0(OSM 좌표 25곳), map_template.py v1.0.0 추가, blockout_template.py v1.1.0(MAP 접두어), PHOTO/IMAGE 기록 양식·CREDITS.md 추가. 스크립트 2종은 Blender 4.2.0·5.2.3에서 실행 확인
 - 2026-11-10 | FX04 | v1.0 | 효과 노드·프리셋·설정 라이브러리·참고도·실행 검증 최초 작성
