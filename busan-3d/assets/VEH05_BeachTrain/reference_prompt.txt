@@ -1,0 +1,7 @@
+Create an orthographic model reference sheet for a 3D modeler.
+Subject: fictional coastal sightseeing train with tiered seats all facing the sea.
+Model-design bounds, not surveyed measurements: X 3 m, Y 12.2 m, Z 2.77 m. Z up, front negative Y; floor-center origin. All unspecified details are fictional artistic settings. Preserve confirmed facts listed in spec.md.
+Layout: 4 views in a 2x2 grid — FRONT, RIGHT SIDE, BACK, TOP — all at exactly the same scale, aligned to a faint 1-meter grid, true orthographic projection, no perspective.
+Style: stylized miniature diorama, soft bevels, simplified forms, clean dark outlines, flat even lighting, no cast shadows, light gray background.
+Include: a 1.7 m human silhouette beside each view for scale; palette swatches: #3A3D42, #9A7350, #9DB7E0, #A9D6F0, #F2EFE6, #F4A6A0.
+Exclude: brand logos, readable commercial signage, copied application screens, watermarks, scenery backgrounds. Use generic brands and original sculpture designs. Written dimensions and executable blockout take precedence over any illustration.
