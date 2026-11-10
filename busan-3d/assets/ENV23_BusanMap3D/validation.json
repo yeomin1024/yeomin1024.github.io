@@ -1,0 +1,18 @@
+{
+  "id": "ENV23",
+  "name": "BusanMap3D",
+  "dims": [
+    4.0,
+    3.0,
+    0.17000000178813934
+  ],
+  "roundtrip_dims": [
+    4.0,
+    3.0,
+    0.17000000178813934
+  ],
+  "triangles": 120,
+  "parts": 5,
+  "budget": 40000,
+  "pass_": true
+}
