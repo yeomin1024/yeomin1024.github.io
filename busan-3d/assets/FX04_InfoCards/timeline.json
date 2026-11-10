@@ -1,0 +1,9 @@
+{
+  "fps": 24,
+  "fade_in": 6,
+  "hold": 96,
+  "fade_out": 6,
+  "safe_margin_px": 64,
+  "source": "FACTS.md",
+  "brand": "fictional"
+}
