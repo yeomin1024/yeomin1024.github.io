@@ -1,4 +1,4 @@
-# VERSION: v1.0.0 — 2026-11-10 — 블록아웃 스크립트 템플릿 최초 작성
+# VERSION: v1.1.0 — 2026-11-10 — 지도용 에셋 접두어 MAP 허용 (3D는 지도·지형·단순 소품만 만드는 방침)
 """
 부산 3D 영상 프로젝트 — Blender 블록아웃(기본 형태) 스크립트 템플릿
 
@@ -89,7 +89,7 @@ PARTS = [
 # ═════════════════════════════════════════════
 # 아래는 공용 함수 — 수정하지 않는다
 # ═════════════════════════════════════════════
-NAME_RE = re.compile(r"^(VEH|ENV|SF|CHR|PRP|FOOD|FX)\d{2}_[A-Za-z0-9]+_[A-Za-z0-9]+_L[0-2]$")
+NAME_RE = re.compile(r"^(MAP|VEH|ENV|SF|CHR|PRP|FOOD|FX)\d{2}_[A-Za-z0-9]+_[A-Za-z0-9]+_L[0-2]$")
 SHAPES = {"cube", "cylinder", "cone", "sphere", "plane", "empty"}
 
 logger = logging.getLogger("busan3d.blockout")
@@ -142,7 +142,7 @@ def pivot_offset(part):
 def validate_inputs():
     """입력 검사. 문제 목록을 돌려준다(빈 목록이면 통과)."""
     problems = []
-    if not re.fullmatch(r"(VEH|ENV|SF|CHR|PRP|FOOD|FX)\d{2}", ASSET_ID):
+    if not re.fullmatch(r"(MAP|VEH|ENV|SF|CHR|PRP|FOOD|FX)\d{2}", ASSET_ID):
         problems.append(f"ASSET_ID 형식 오류: {ASSET_ID}")
     if not re.fullmatch(r"[A-Za-z0-9]+", ASSET_NAME):
         problems.append(f"ASSET_NAME 은 영문·숫자만: {ASSET_NAME}")
@@ -389,10 +389,11 @@ def self_test():
     assert pivot_offset({"size": (1, 2, 3), "pivot": "bottom"}) == (0, 0, 1.5)
     assert pivot_offset({"size": (1, 2, 3), "pivot": (-0.5, 0, -1.5)}) == (0.5, 0, 1.5)
     assert NAME_RE.match("VEH02_CityBus_DoorFront_L0")
+    assert NAME_RE.match("MAP04_TransitTokens_BusBody_L0")
     assert not NAME_RE.match("veh02_CityBus_Door_L0")
     problems = validate_inputs()
     assert not problems, problems
-    log("SELFTEST", result="통과", checks=8)
+    log("SELFTEST", result="통과", checks=9)
 
 
 if __name__ == "__main__":
@@ -402,6 +403,7 @@ if __name__ == "__main__":
         main()
 
 # CHANGELOG
+# v1.1.0 — 2026-11-10 — 이름 규칙에 MAP 접두어 추가(MAP04 탈것 토큰, MAP05 사진 액자 등). 동작 변경 없음
 # v1.0.0 — 2026-11-10 — 최초 작성: 입력 검사, 재질(hex→linear), bmesh 도형 생성, 원점(pivot) 처리,
 #                       모디파이어(베벨·배열·미러[부모 원점 기준]), 부품/전체 치수·삼각형 리포트, --self-test
 #                       Blender 4.2.0 / 5.2.3 (bpy 모듈)에서 2회 연속 실행·전 도형·옵션 동작 확인

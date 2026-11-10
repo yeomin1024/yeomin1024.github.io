@@ -1,10 +1,12 @@
-# {ID} {이름} 설계도
+# {ID} {이름} 3D 설계도
 
+<!-- 양식 버전: v1.1 — 2026-11-10 — 3D 항목(MAP) 전용으로 범위 변경. 실제 사진은 PHOTO_SHEET_TEMPLATE, 일러스트는 IMAGE_SHEET_TEMPLATE -->
 버전: v1.0 — YYYY-MM-DD — {변경 요약}
 상태: 초안 | 검토 | 확정
 폴더: `busan-3d/assets/{ID}_{영문명}/`
 
 > 이 양식의 섹션 번호와 제목은 바꾸지 않는다. 모든 숫자에 [확인] / [추정] / [설정] 태그를 붙인다.
+> 3D 항목(REGISTRY.md A표: 지도·지형·토큰·액자·패널)에만 쓴다. 지도(MAP01~03)는 `map_template.py`, 나머지는 `blockout_template.py`를 쓴다. 해당 없는 섹션은 "해당 없음"이라고 적는다.
 
 ## 1. 개요
 | 항목 | 내용 |
@@ -107,12 +109,11 @@ Exclude: brand logos, readable signage text, watermarks, scenery backgrounds.
 |---|---|---|---|---|
 
 ## 14. 블록아웃 스크립트
-- 파일: `blockout.py` (`templates/blockout_template.py` 복사본)
-- 채운 블록: `1. 에셋 정보`, `2. 재질`, `3. 부품`
+- 파일: 지도는 `map_build.py`(`templates/map_template.py` 복사본, `1. 설정` 블록만 채움), 나머지는 `blockout.py`(`templates/blockout_template.py` 복사본, `1. 에셋 정보`·`2. 재질`·`3. 부품` 블록만 채움)
 - 실행 후 확인할 로그: `[REPORT] dims_m=... expected_m=... max_err_m=...` (1 cm 넘으면 WARNING), `triangles=... budget=...`
 
 ## (종류별 추가 섹션)
-INSTRUCTIONS.md 8장의 키트(K1~K5), 캐릭터(C1~C7), 음식(F1~F5) 섹션 중 해당하는 것을 여기에 붙인다.
+해당 없음 (v1의 키트·캐릭터·음식 3D 섹션은 폐기됨)
 
 ---
 
