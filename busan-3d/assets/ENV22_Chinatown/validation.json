@@ -1,0 +1,18 @@
+{
+  "id": "ENV22",
+  "name": "Chinatown",
+  "dims": [
+    18.0,
+    20.0,
+    5.549999713897705
+  ],
+  "roundtrip_dims": [
+    18.0,
+    20.0,
+    5.549999713897705
+  ],
+  "triangles": 1008,
+  "parts": 13,
+  "budget": 3000,
+  "pass_": true
+}
