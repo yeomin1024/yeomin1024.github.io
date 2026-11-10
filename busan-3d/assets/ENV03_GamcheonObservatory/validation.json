@@ -1,0 +1,18 @@
+{
+  "id": "ENV03",
+  "name": "GamcheonObservatory",
+  "dims": [
+    10.0,
+    8.079999923706055,
+    2.049999952316284
+  ],
+  "roundtrip_dims": [
+    10.0,
+    8.079999923706055,
+    2.049999952316284
+  ],
+  "triangles": 640,
+  "parts": 11,
+  "budget": 12000,
+  "pass_": true
+}
