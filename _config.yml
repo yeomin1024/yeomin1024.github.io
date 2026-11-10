@@ -171,6 +171,7 @@ exclude:
   - README
   - tmp
   - /docs # ignore Minimal Mistakes /docs
+  - busan-3d # 3D 영상 작업 폴더 (블로그에 게시하지 않음)
   - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
