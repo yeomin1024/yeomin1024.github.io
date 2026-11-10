@@ -1,0 +1,27 @@
+{
+  "prefix": "ENV02_GamcheonHouseKit_",
+  "seed": 20261110,
+  "modules": {
+    "House0": [
+      "House0Wall",
+      "House0Roof",
+      "House0Door",
+      "House0Window",
+      "WaterTank0"
+    ],
+    "House1": [
+      "House1Wall",
+      "House1Roof",
+      "House1Door",
+      "House1Window",
+      "WaterTank1"
+    ],
+    "House2": [
+      "House2Wall",
+      "House2Roof",
+      "House2Door",
+      "House2Window",
+      "WaterTank2"
+    ]
+  }
+}
