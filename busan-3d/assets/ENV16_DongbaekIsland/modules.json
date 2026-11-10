@@ -1,0 +1,15 @@
+{
+  "prefix": "ENV16_DongbaekIsland_",
+  "seed": 20261110,
+  "modules": {
+    "Deck8": [
+      "CoastalDeckFloor",
+      "CoastalDeckPost0S0",
+      "CoastalDeckPost0S1",
+      "CoastalDeckRail0",
+      "CoastalDeckPost2S0",
+      "CoastalDeckPost2S1",
+      "CoastalDeckRail2"
+    ]
+  }
+}

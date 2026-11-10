@@ -1,0 +1,18 @@
+{
+  "id": "ENV16",
+  "name": "DongbaekIsland",
+  "dims": [
+    35.30000114440918,
+    22.0,
+    10.0
+  ],
+  "roundtrip_dims": [
+    35.30000114440918,
+    22.0,
+    10.0
+  ],
+  "triangles": 588,
+  "parts": 13,
+  "budget": 12000,
+  "pass_": true
+}
