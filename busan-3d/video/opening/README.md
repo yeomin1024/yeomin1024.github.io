@@ -2,7 +2,7 @@
 
 버전: v2 — 2026-11-11 — 탈것 아이콘을 MAP04 모델로 교체 (v1: 2026-11-10 임시 상자 아이콘)
 상태: 검토
-결과물: `opening_v1.mp4` (1280×720, 24fps, 22초)
+결과물: `opening_v2.mp4` (1280×720, 24fps, 22초, H.264, 3.0 MB)
 
 ## 무엇을 보여주나
 | 시간 | 프레임 | 장면 | 화면 문구 (FACTS.md 1장) |
@@ -26,7 +26,7 @@
 blender --background --python opening_blender.py -- --out <프레임 폴더>
 #    구도만 볼 때: ... -- --out <폴더> --stills   (timeline.json 의 check_frames 8장)
 # 2) 글자·패널 얹고 mp4 (Pillow, ffmpeg, Noto Sans CJK 글꼴)
-python opening_overlay.py --frames <프레임 폴더> --comp <합성 폴더> --out opening_v1.mp4
+python opening_overlay.py --frames <프레임 폴더> --comp <합성 폴더> --out opening_v2.mp4
 ```
 - 장면 시간, 카메라 위치, 문구는 `timeline.json` 한 곳에서 고친다.
 - 지도는 `assets/MAP01_BusanMap/BusanMap.blend`를 그대로 불러오고, 이 영상에서만 다음을 바꾼다: 지형 부드러운 음영, 핀 0.6배, 2·3일차 루트 숨김.
@@ -39,6 +39,8 @@ python opening_overlay.py --frames <프레임 폴더> --comp <합성 폴더> --o
 | KTX 출발점 | 부산진역 정류장 좌표(OSM)와 루트 점 차이 0.0000 unit |
 | 글자 위치 | Blender 카메라로 계산한 핀 화면 좌표(`screen_points.json`)에 맞춰 이름표를 붙임 |
 | 구도 | 확인용 8장을 보고 가까운 장면의 카메라를 뒤로 뺌, 지형을 부드럽게, 핀을 0.6배로 |
+| 렌더 | Eevee(소프트웨어 OpenGL) 528프레임 44분(프레임당 5.0초), 960×540 → 글자는 1280×720 |
+| 완성 영상 | ffprobe: h264, 1280×720, 24fps, 528프레임, 22.0초 |
 
 ## 변경 이력
 - v2 — 2026-11-11 — MAP04 토큰으로 교체, 버스가 감천 장면 끝까지 보이게
