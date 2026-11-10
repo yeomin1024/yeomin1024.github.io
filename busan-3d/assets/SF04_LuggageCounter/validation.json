@@ -1,0 +1,18 @@
+{
+  "id": "SF04",
+  "name": "LuggageCounter",
+  "dims": [
+    2.5,
+    2.375,
+    2.0249998569488525
+  ],
+  "roundtrip_dims": [
+    2.5,
+    2.375,
+    2.0249998569488525
+  ],
+  "triangles": 468,
+  "parts": 8,
+  "budget": 12000,
+  "pass_": true
+}
