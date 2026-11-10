@@ -1,0 +1,18 @@
+{
+  "id": "ENV01",
+  "name": "BusanStation",
+  "dims": [
+    64.0,
+    96.0,
+    13.399999618530273
+  ],
+  "roundtrip_dims": [
+    64.0,
+    96.0,
+    13.399999618530273
+  ],
+  "triangles": 408,
+  "parts": 19,
+  "budget": 12000,
+  "pass_": true
+}
