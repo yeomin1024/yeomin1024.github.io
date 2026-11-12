@@ -171,7 +171,6 @@ exclude:
   - README
   - tmp
   - /docs # ignore Minimal Mistakes /docs
-  - crisis # YouTube 채널 분석 코드·결과 (사이트에 올리지 않음)
   - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
