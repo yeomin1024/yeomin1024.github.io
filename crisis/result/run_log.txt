@@ -1,0 +1,28 @@
+[DONE] [2026-11-12T04:59:33] version=v1.2.0 mode=analyze as_of=2026-11-12 seed=0 note="연구·기획용 — 안전 조언은 공식 지침으로 확인"
+[LOAD] [2026-11-12T04:59:33] source="YouTube Data API v3 search(order=viewCount,KR,ko)" queries=24 search_hits=571 unique_videos=571 channels=408 date_range=2026-05-16~2026-11-12 api_calls=0 units=0 cache_hits=45
+[VALIDATE] [2026-11-12T04:59:33] rows_in=571 rows_out=500 anomalies={"duplicate_ids": 0, "missing_views": 0, "hidden_or_missing_subs": 0, "missing_published": 0, "future_published": 0, "too_new(<3d)": 17, "older_than_window": 0, "non_korean_title": 54, "negative_counts": 0} note="구독자 숨김 채널은 성공 판정에서 빠지고 하루 조회수 상위 묶음으로만 볼 수 있음"
+[FEATURE] [2026-11-12T04:59:33] on_topic=456 off_topic=44 off_topic_examples=["한국vs북한이 정말 전쟁나면 어떤 일이 벌어질까?｜가장", "기도가 거절당했을 때, 당신이라면 어떻게 하시겠습니까?", "블랙홀 최악의 운명 6가지 #Shorts", "【실화 공포인터뷰】 김해에서 귀신을 만난 택시기사 (3", "당신은 AI시대에 살아남을 수 있을까"]
+[FEATURE] [2026-11-12T04:59:33] danger_types=12 title_formats=9 danger_counts={"사고_교통": 103, "기타·미분류": 77, "사고_추락·시설": 53, "범죄_사기": 49, "사고_물·수난": 44, "범죄_스토킹·침입": 43, "범죄_흉기·폭력": 39, "사고_항공·선박": 14, "재난_자연·조난": 13, "범죄_납치·감금": 10, "사고_화재·폭발": 9, "동물": 1, "재난_군중": 1} genre_counts={"그 밖": 190, "정보·대처법": 108, "뉴스·사건 보도": 59, "유머·장난": 53, "영화·드라마 리뷰": 28, "괴담·공포": 18} top_channels={"KBS 실험실": 33, "너라면 살았을까": 18, "코밈 KOMEME": 17} shorts=338 long=118 params={"SUB_FLOOR": 1000, "SHORTS_MAX_SEC": 180}
+[SIGNAL] [2026-11-12T04:59:33] rule="views>=30000 & views/max(subs,1000)>=2.0" success=73 daily_top_cut=5693 by_group={"그 밖": 363, "성공 사례": 73, "하루 조회수 상위": 20} success_rate=0.16 success_rate_channel_weighted=0.149 success_channels=51
+[SIGNAL] [2026-11-12T04:59:33] sensitivity_views_per_sub={"x1.0": 91, "x2.0": 73, "x5.0": 56, "x10.0": 40}
+[SIGNAL] [2026-11-12T04:59:33] base_success_rate_channel_weighted=0.149 top_lift=[["사고_추락·시설", 64, 2.56], ["범죄_사기", 53, 1.77], ["사고_항공·선박", 15, 1.61], ["대처법", 82, 1.16], ["사고_물·수난", 50, 1.01]]
+[COMMENT] [2026-11-12T04:59:33] target_videos=58 max_per_channel=3 target_channels=47 success_videos=50 daily_videos=8 comments_raw=2706 comments_clean=2685 comments_disabled_videos=0 api_calls=0 units=0 cache_hits=103
+[SEGMENT] [2026-11-12T04:59:33] comments=2685 segments=11 counts={"simulator": 31, "survivor": 44, "fact_checker": 129, "empathy": 39, "judge": 68, "humor": 448, "justice": 172, "woman_safety": 3, "parent": 1, "pro": 58, "driver": 50} cover=0.342 age_n=2 age_hint={"30~40대": 6, "20대": 5, "10대": 4, "50대 이상": 1} student_n=2 female_n=16 male_n=22
+[PERSONA] [2026-11-12T04:59:33] id=P1 key=humor n=448 share=0.167 age_n=0 age_median=null f=1 m=3 top_danger=사고_추락·시설 top_action=도망·피하기 top_want="구체적 대처법" like_share=0.139
+[PERSONA] [2026-11-12T04:59:33] id=P2 key=justice n=172 share=0.064 age_n=0 age_median=null f=0 m=2 top_danger=사고_항공·선박 top_action=신고·도움요청 top_want="구체적 대처법" like_share=0.501
+[PERSONA] [2026-11-12T04:59:33] id=P3 key=fact_checker n=129 share=0.048 age_n=1 age_median=30.0 f=2 m=3 top_danger=사고_물·수난 top_action=신고·도움요청 top_want="구체적 대처법" like_share=0.057
+[PERSONA] [2026-11-12T04:59:33] id=P4 key=judge n=68 share=0.025 age_n=0 age_median=null f=0 m=1 top_danger=사고_항공·선박 top_action=침착·순응 top_want="구체적 대처법" like_share=0.009
+[PERSONA] [2026-11-12T04:59:33] id=P5 key=pro n=58 share=0.022 age_n=1 age_median=30.0 f=0 m=2 top_danger=사고_추락·시설 top_action=신고·도움요청 top_want="구체적 대처법" like_share=0.074
+[PERSONA] [2026-11-12T04:59:33] id=P6 key=driver n=50 share=0.019 age_n=1 age_median=30.0 f=0 m=0 top_danger=사고_교통 top_action=신고·도움요청 top_want="구체적 대처법" like_share=0.01
+[PERSONA] [2026-11-12T04:59:33] id=P7 key=survivor n=44 share=0.016 age_n=1 age_median=30.0 f=1 m=2 top_danger=사고_물·수난 top_action=신고·도움요청 top_want="구체적 대처법" like_share=0.003
+[PERSONA] [2026-11-12T04:59:33] id=P8 key=empathy n=39 share=0.015 age_n=0 age_median=null f=0 m=0 top_danger=사고_항공·선박 top_action=도망·피하기 top_want="구체적 대처법" like_share=0.067
+[PERSONA] [2026-11-12T04:59:33] id=P9 key=simulator n=31 share=0.012 age_n=1 age_median=30.0 f=1 m=0 top_danger=기타·미분류 top_action=신고·도움요청 top_want="구체적 대처법" like_share=0.005
+[PERSONA] [2026-11-12T04:59:33] final=F1 name="웃으려고 보는 쇼츠 시청자" n=448 share=0.167 like_share=0.139 median_likes=2.0 top_video_like_share=0.449 top_danger=사고_추락·시설 shorts_share=0.964
+[PERSONA] [2026-11-12T04:59:33] final=F2 name="참사에 감정이입하고 분노하는 사람" n=197 share=0.073 like_share=0.523 median_likes=9.0 top_video_like_share=0.912 top_danger=사고_항공·선박 shorts_share=0.751
+[PERSONA] [2026-11-12T04:59:33] final=F3 name="정보를 보태는 경험자·전문가" n=215 share=0.08 like_share=0.13 median_likes=1.0 top_video_like_share=0.377 top_danger=사고_물·수난 shorts_share=0.823
+[PERSONA] [2026-11-12T04:59:33] final=F4 name="선택을 판정하는 '나라면' 참여자" n=101 share=0.038 like_share=0.015 median_likes=2.0 top_video_like_share=0.23 top_danger=사고_항공·선박 shorts_share=0.861
+[PERSONA] [2026-11-12T04:59:33] final_cover=0.328 note="나머지 댓글은 묶음 단서 없음(짧은 감탄·잡담)"
+[TREND] [2026-11-12T04:59:33] split="old<2026-10-15<=recent<=2026-11-12" recent_videos=73 old_videos=383
+[TREND] [2026-11-12T04:59:33] danger_share_diff={"사고_항공·선박": 0.078, "재난_자연·조난": 0.064, "사고_물·수난": 0.048, "범죄_흉기·폭력": 0.045} recent_comments=292 old_comments=2393 rising_words=["전화", "경찰", "보이스피싱", "영화", "사람"] hot="엘리베이터에 갇혔을 때 하는 일과 절대 하면 안 되는 일"
+[EXPORT] [2026-11-12T04:59:33] files=["analysis.md", "personas.md", "personas.json", "videos.csv", "title_lift.csv"] dir=crisis/result seconds=0.3
+[DONE] [2026-11-12T04:59:33] personas=9 success=73 api_calls=0 units=0 cache_hits=103 quota_dead=false seconds=0.3
