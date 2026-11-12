@@ -1,5 +1,6 @@
-# VERSION: v1.0.0 — 2026-11-12 — crisis_lab 분류·성공 판정 단위 테스트
-"""python -m unittest crisis/test_crisis_lab.py  (네트워크 불필요)"""
+# VERSION: v1.0.1 — 2026-11-12 — crisis/code/ 로 이동 (테스트 내용 변경 없음)
+# (이전) v1.0.0 — 2026-11-12 — crisis_lab 분류·성공 판정 단위 테스트
+"""python -m unittest crisis/code/test_crisis_lab.py  (네트워크 불필요)"""
 import sys
 import unittest
 from pathlib import Path

@@ -1,4 +1,5 @@
-# VERSION: v1.2.0 — 2026-11-12 — 묶음 9개 → 제목용 최종 페르소나 4명 합치기 (merge_personas)
+# VERSION: v1.2.1 — 2026-11-12 — 폴더 정리: 코드를 crisis/code/ 로 이동 (분석 로직 변경 없음)
+# (이전) v1.2.0 — 2026-11-12 — 묶음 9개 → 제목용 최종 페르소나 4명 합치기 (merge_personas)
 # (이전) v1.1.0 — 2026-11-12 — 주제 필터·채널 쏠림 보정·장르 태그·댓글 사전 확장·선택형 검색어 4개
 # (이전) v1.0.0 — 2026-11-12 — 위기 상황 채널 1차 분석 파이프라인 신규 작성
 """
@@ -20,9 +21,9 @@ crisis_lab.py — "범죄·사고 위기 상황, 당신이라면?" 채널 기획
 
 주의: 연구·기획용 도구. 영상 속 안전 조언은 반드시 소방청·경찰청 등 공식 지침으로 따로 확인할 것.
 
-실행:  python crisis/crisis_lab.py run            # 수집+분석 (캐시 있으면 API 호출 안 함)
-       python crisis/crisis_lab.py analyze        # 캐시만으로 분석
-       LOG_LEVEL=DEBUG python crisis/crisis_lab.py analyze
+실행:  python crisis/code/crisis_lab.py run            # 수집+분석 (캐시 있으면 API 호출 안 함)
+       python crisis/code/crisis_lab.py analyze        # 캐시만으로 분석
+       LOG_LEVEL=DEBUG python crisis/code/crisis_lab.py analyze
 """
 from __future__ import annotations
 
@@ -41,11 +42,11 @@ import numpy as np
 import pandas as pd
 import requests
 
-VERSION = "v1.2.0"
+VERSION = "v1.2.1"
 SEED = 0  # 무작위 요소 없음 — 재현성 기록용
 
 # ─────────────────────────── 설정 ───────────────────────────
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent  # v1.2.1: crisis/ (코드는 crisis/code/)
 CACHE_DIR = ROOT / "cache"
 RESULT_DIR = ROOT / "result"
 API = "https://www.googleapis.com/youtube/v3"
